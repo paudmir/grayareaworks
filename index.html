@@ -1,11 +1,58 @@
 <!DOCTYPE html>
-<htmls lang="en">
+<html lang="en">
+<style>
+.aparecium {
+    color: aliceblue;
+    font-family: "Encode Sans Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.ghost {
+    color: black;
+    font-family: "Encode Sans Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.happy {
+    background-image: url("/gifs/calm.gif");
+    background-color: black;
+}
+.angry {
+    background-image: url("/gifs/angry.gif");
+    background-color: black;
+}
+.burst {
+    background-image: url("/gifs/burst.gif");
+    background-color: black;
+}
+.sfo {
+    background-color: #009ade;
+    font-family: "Rubik 80s Fade", system-ui;
+    font-weight: 400;
+    font-size: 48px;
+    font-style: normal;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+</style> 
 <head>
+    <title>SFO Gets emotional</title>
     <meta charset="utf-8">
-    <script src="main.js" defer></script>
+    <script src="homework_oct18.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Fascinate+Inline&family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap" rel="stylesheet">
 </head>
-<body>
-    Hello, World!
-    <button onclick="updateClickCount()">---Click me!---</button>
+<body style="background-color:black;">
+    <div class="sfo">
+        <p>SFO Emotions</p>
+        <p style="font-size:12px;font-family:Arial, Helvetica, sans-serif;">Source: <a href="https://data.sfgov.org/Transportation/SFO-Screening-Checkpoint-Satisfaction-October-2019/xyey-v962/about_data">SFO Screening Checkpoint Satisfaction October, 2019</a> | DataSF. (2020, June 15). </p>
+    </div>
+    <button id="ab-button" onclick="about(this)" value="hide"><img src="/gifs/info-48.png"></button>
+    <button onclick="getSFOResponses(this)"><img src="/gifs/metal-detector-48.png"></button>
+    <!--<button onclick="updateClickCount()">---Click me!---</button>-->
+    <div id="waiting-area" style="background-color: black;display: grid;grid-gap: 1rem;grid-template-columns: 20% 20% 20% 20% 20%;grid-auto-rows: 1fr;"></div>
 </body>
 </html>
