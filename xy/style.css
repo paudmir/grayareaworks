@@ -27,17 +27,32 @@
         background: red;
     }
 
+  @keyframes myAnimation {
+    from {top: 35%;}
+    to {top: 40%;}
+}
+
+/* The element to apply the animation to */
+    #ouija {
+        animation-name: myAnimation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+    }
+
+
     #start-button {
     width: 220px;
     height: 50px;
     border: none;
     outline: none;
     color: #fff;
-    background: #111;
+    background: orange;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     z-index: 0;
     border-radius: 10px;
+    top: 120px;
 }
 
 #start-button:before {
@@ -86,3 +101,4 @@
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
