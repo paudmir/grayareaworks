@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Database example</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>
+          Wishlog
+        </h1>
+      </header>
+      <ul id="wishes"></ul>
+      <p>
+        <a href="index.html">submit a wish</a>
+      </p>
+      <script>
+        getWishes();
+        async function getWishes() {
+          // this is a GET request, by default
+          const response = await fetch('/wish');
+          const data = await response.json();
+
+          // add a list element for each item in the response.
+          const wishList = document.getElementById('wishes');
+          for (let item of data) {
+            console.log(item);
+            const listItem = document.createElement("li");
+            const dateString = new Date(item.timestamp).toLocaleString();
+            listItem.textContent = `${item.wish}, submitted ${dateString}`;
+            wishList.appendChild(listItem);
+          }
+        }
+      </script>
+
+    </main>
+  </body>
+</html>

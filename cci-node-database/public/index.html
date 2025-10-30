@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Database example</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>
+          Wishlog
+        </h1>
+      </header>
+        <h2>Tell us your secret wish (we won't keep the secret though)</h2>
+        <form id="wishForm" enctype="application/json">
+          <label for="wish">I wish for</label>
+          <input
+            type="text"
+            id="wish"
+            name="wish"
+            placeholder="Your wish"
+          />
+          <input type="submit" id="submit" value="Submit" />
+        </form>
+        <p><a href="wishes.html">See all wishes</a></p>
+    </main>
+  </body>
+</html>
